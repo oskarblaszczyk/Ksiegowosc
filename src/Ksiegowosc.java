@@ -13,7 +13,22 @@ public class Ksiegowosc {
         this.rodzajKsiegowosci = rodzajKsiegowosci;
         this.klient = klient;
         this.ksiegowa = ksiegowa;
+        klient.setKsiegowosc(this);
+        ksiegowa.getProwadzoneKsiegowosci().add(this);
         ekstensja.add(this);
+    }
+    public double koszt(){
+        if (ksiegowa.isLubiWachac() && klient.getObwod() == 15.5){
+            return rodzajKsiegowosci.getCena() / 2;
+        }
+        return rodzajKsiegowosci.getCena();
+    }
+
+    public double strata(){
+        if (ksiegowa.isLubiWachac() && klient.getObwod() == 15.5){
+            return rodzajKsiegowosci.getCena() / 2;
+        }
+        return 0;
     }
 
     public String getNazwa() {

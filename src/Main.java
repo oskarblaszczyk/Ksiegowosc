@@ -19,6 +19,11 @@
 
 public class Main {
     public static void main(String[] args) {
+        Klient kl1 = new Klient("Adam", "Nowak", 15.5);
+
+        Ksiegowa ks1 = new Ksiegowa("Janina", "Wachalska", true);
+
+
 
     }
 }

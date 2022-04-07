@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Klient extends Osoba {
     private double obwod;
+    private Ksiegowosc ksiegowosc;
     private static List<Klient> klienci = new ArrayList<>();
 
     public Klient(String imie, String nazwisko, double obwod) {
@@ -21,5 +22,13 @@ public class Klient extends Osoba {
 
     public static List<Klient> getKlienci() {
         return klienci;
+    }
+
+    public Ksiegowosc getKsiegowosc() {
+        return ksiegowosc;
+    }
+
+    public void setKsiegowosc(Ksiegowosc ksiegowosc) {
+        this.ksiegowosc = ksiegowosc;
     }
 }
